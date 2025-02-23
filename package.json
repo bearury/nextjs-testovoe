@@ -1,0 +1,55 @@
+{
+    "name": "testovoe",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "lint-fix": "next lint --fix",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "prepare": "husky"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*": [
+            "next lint",
+            "git add -A ."
+        ]
+    },
+    "dependencies": {
+        "axios": "^1.6.2",
+        "jwt-decode": "^3.1.2",
+        "next": "15.1.6",
+        "react": "19.0.0",
+        "react-beautiful-dnd": "^13.1.1",
+        "react-cropper": "^2.3.3",
+        "react-dom": "latest",
+        "react-hook-form": "^7.46.2",
+        "swr": "^2.2.4"
+    },
+    "devDependencies": {
+        "@testing-library/dom": "^10.4.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.2.0",
+        "autoprefixer": "latest",
+        "classnames": "^2.3.2",
+        "eslint": "latest",
+        "eslint-config-next": "latest",
+        "eslint-plugin-jest": "^28.11.0",
+        "husky": "^9.1.7",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
+        "lint-staged": "^15.4.3",
+        "postcss": "latest",
+        "sass": "^1.68.0",
+        "tailwindcss": "latest",
+        "ts-node": "^10.9.2"
+    }
+}
